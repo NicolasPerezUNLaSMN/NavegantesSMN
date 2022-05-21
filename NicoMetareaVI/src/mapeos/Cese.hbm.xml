@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+
+	<class name="modelo.Cese" table="Cese">                   
+		<id column="idCese" name="idCese">
+		<generator class="identity"/>		
+		</id>
+		
+		
+		
+		<property column="texto" name="texto" type="string"/>
+		<property column="activo" name="activo" type="int"/>
+
+		
+		
+		
+	
+		
+		
+		
+		
+	</class>
+</hibernate-mapping>					

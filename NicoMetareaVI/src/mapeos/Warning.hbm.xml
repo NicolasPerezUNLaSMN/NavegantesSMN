@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+
+	<class name="modelo.Warning" table="Warning">                   
+		<id column="idWarning" name="idWarning">
+		<generator class="identity"/>		
+		</id>
+		
+		
+		<property column="numeroWarning" name="numeroWarning" type="int"/>
+		<property column="actualizacion" name="actualizacion" type="int"/>
+		<property column="fecha" name="fecha" type="calendar"/>
+			<property column="areas" name="areas" type="string"/>
+			<property column="fenomeno" name="fenomeno" type="string"/>
+				<property column="texto" name="texto" type="string"/>
+					<property column="tipo" name="tipo" type="string"/>
+						<property column="dominio" name="dominio" type="string"/>
+						<property column="activo" name="activo" type="int"/>
+		
+		
+		<many-to-one name="boletin" class="modelo.Boletin" column="idBoletin" not-null="true"/>
+		
+	
+		
+	</class>
+</hibernate-mapping>					

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD
+3.0//EN" "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+	
+	<session-factory>
+		<property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+		
+		
+		
+		<property name="connection.url">jdbc:mysql://127.0.0.1:3306/nico?autoReconnect=true&amp;interactiveClient=true&amp;autoReconnectForPools=true</property>
+		
+		<!-- characterEncoding=utf8&useUnicode=true&sessionVariables=storage_engine%3DInnoDB&interactiveClient=true //&amp;autoReconnectForPools=true -->
+	
+
+<property name="connection.username">nperez</property>
+		<property name="connection.password">nishikori31415926</property>	
+		
+		
+		<!--  
+		
+		Casa
+		<property name="connection.username">root</property>
+		<property name="connection.password">nishikori31415926</property>	
+		
+		
+		
+		
+		Trabajo
+		<property name="connection.username">nperez</property>
+		<property name="connection.password">nperez</property>	
+		
+		
+		
+		<property name="connection.autoReconnect">true</property>
+    	<property name="connection.autoReconnectForPools">true</property>
+    	<property name="connection.is-connection-validation-required">true</property>
+		
+		
+		
+		
+		-->
+		
+		<property name="connection.pool_size">100</property>
+		<property name="dialect">org.hibernate.dialect.MySQLDialect</property>
+	 
+		<property name="show_sql">true</property> <!-- en true muestra hql en consola-->
+		
+		<property name="connection.autocommit">true</property>
+		
+		<property name="testOnBorrow">true</property> 
+		<property name="validationQuery">SELECT 1></property> 
+		<property name="validationInterval">60000</property> 
+		
+		
+		
+		   
+		
+	
+		
+		<mapping resource="mapeos/Boletin.hbm.xml"/>
+		<mapping resource="mapeos/Warning.hbm.xml"/>
+		<mapping resource="mapeos/Fenomeno.hbm.xml"/>
+		<mapping resource="mapeos/Cese.hbm.xml"/>
+		<mapping resource="mapeos/BoletinEmitido.hbm.xml"/>
+		<mapping resource="mapeos/Email.hbm.xml"/>
+		<mapping resource="mapeos/Hielo.hbm.xml"/>
+		
+		
+			
+	</session-factory>
+</hibernate-configuration>   			
